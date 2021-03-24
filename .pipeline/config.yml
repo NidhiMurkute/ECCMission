@@ -72,12 +72,12 @@ stages:
   
   productionDeployment:
     cfTargets:
-     - org: 'missionecc'
-       space: 'dev'
-       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-       appName: 'myAppName'
-       manifest: 'manifest.yml'
-       credentialsId: 'global-ag'
+    - org: 'missionecc'
+      space: 'dev'
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      appName: 'myAppName'
+      manifest: 'manifest.yml'
+      credentialsId: 'global-ag'
 
         
   #endToEndTests:
