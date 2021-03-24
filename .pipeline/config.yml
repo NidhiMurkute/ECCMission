@@ -12,10 +12,9 @@
 
 ### General project setup
 general:
-  inferBuildTool: true
   unsafeMode: false
   projectName: 'cloud-cap-s4ems-bp'
-  productiveBranch: 'main'
+  productiveBranch: 'master'
 
 ### Step-specific configuration
 steps:
@@ -70,6 +69,16 @@ stages:
         error: 100
         warning: 500
         info: 1000
+  
+  productionDeployment:
+    cfTargets:
+     - org: 'missionecc'
+       space: 'dev'
+       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+       appName: 'myAppName'
+       manifest: 'manifest.yml'
+       credentialsId: 'global'
+
         
   #endToEndTests:
     #cfTargets:
@@ -85,12 +94,3 @@ stages:
 #    credentials:
 #      - alias: 'mySystemAlias'
 #        credentialId: 'mySystemCredentialsId'
-
-  ProductionDeployment:
-   cfTargets:
-     - org: 'missionecc'
-       space: 'dev'
-       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-       appName: 'myAppName'
-       manifest: 'manifest.yml'
-       credentialsId: 'global'
