@@ -77,7 +77,7 @@ stages:
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
       appName: 'myAppName'
       manifest: 'manifest.yml'
-      credentialsId: 'global-mamatha'
+      credentialsId: 'global'
 
         
   #endToEndTests:
