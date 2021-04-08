@@ -70,7 +70,7 @@ stages:
         warning: 500
         info: 1000
   
-  productionDeployment:
+  Release:
     cfTargets:
     - org: 'missionecc'
       space: 'dev'
